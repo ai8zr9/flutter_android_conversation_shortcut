@@ -33,8 +33,6 @@ flutter:
       android:
         package: tech.rothirsch.android_conversation_shortcut
         pluginClass: AndroidConversationShortcutPlugin
-      ios:
-        pluginClass: AndroidConversationShortcutPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
