@@ -1,7 +1,8 @@
 name: android_conversation_shortcut
 description: A new Flutter plugin.
 version: 0.0.1
-homepage:
+repository: https://github.com/ai8zr9/flutter_android_conversation_shortcut/tree/master
+homepage: https://github.com/ai8zr9/flutter_android_conversation_shortcut/tree/master
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
