@@ -7,9 +7,10 @@ class AndroidConversationShortcut {
   static const MethodChannel _channel =
       MethodChannel('android_conversation_shortcut');
 
-  static Future<String?> createConversationShortcut(Person person) async {
+  static Future<String?> createConversationShortcut(Person person,
+      [bool rounded = true]) async {
     if (person.key == null || person.name == null) {
-      throw ArgumentError.notNull();
+      throw ArgumentError.notNull('Person key and name must not be null');
     }
     try {
       final String? shortcutID =
@@ -19,7 +20,8 @@ class AndroidConversationShortcut {
         'personIcon': person.icon?.icon,
         'personBot': person.bot,
         'personImportant': person.important,
-        'personUri': person.uri
+        'personUri': person.uri,
+        'roundedIcon': rounded
       });
       return shortcutID;
     } on PlatformException catch (_) {

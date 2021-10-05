@@ -74,7 +74,7 @@ class AndroidConversationShortcutPlugin: FlutterPlugin, MethodCallHandler, Activ
   }
 
   private fun createPersonFromCall(@NonNull call: MethodCall): Person {
-    if (call.argument<String>("personIcon") != null){
+    if (call.argument<String>("personIcon") != null && call.argument<Boolean>("roundedIcon")!!){
       createRoundedIcon(call.argument<String>("personIcon")!!)
     }
     val person =  Person.Builder()
